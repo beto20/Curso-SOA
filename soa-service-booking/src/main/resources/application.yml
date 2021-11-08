@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:~/reserva-service;AUTO_SERVER=true
+    username: root
+    password: 1234
+    driver-class-name: org.h2.Driver
+  application:
+    name: BOOKING-SERVICE
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+
+server:
+  port: 8086
