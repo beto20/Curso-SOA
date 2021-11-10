@@ -1,13 +1,17 @@
 package com.soa.service.booking.business;
 
-import java.util.Optional;
+
+import java.util.List;
 
 import com.soa.service.booking.model.domain.Reserva;
+import com.soa.service.booking.model.dto.request.ReservaRequestDTO;
+import com.soa.service.booking.model.dto.response.ReservaResponseDTO;
 
 public interface ReservaBusiness {
 
-	public Reserva reservarPaquete(Reserva reserva);
-	public Optional<Reserva> buscarReservar(Integer id);
-	public Optional<Reserva> modificarReserva(Integer id, Reserva reserva);
-	public void cancelarReserva(Integer id);
+	public List<Reserva> listar();
+	public ReservaResponseDTO registrar(ReservaRequestDTO dto);
+	public ReservaResponseDTO buscar(Integer id);
+	public void modificar(Integer id, ReservaRequestDTO dto);
+	public void cancelar(Integer id);
 }
