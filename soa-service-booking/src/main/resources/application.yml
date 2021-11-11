@@ -1,21 +1,36 @@
 spring:
   datasource:
-    url: jdbc:h2:file:~/reserva-service;AUTO_SERVER=true
-    username: root
-    password: 1234
-    driver-class-name: org.h2.Driver
+    url: jdbc:postgresql://ec2-34-224-239-147.compute-1.amazonaws.com:5432/d76q51oa7a1mom?user=dkyauuutjkzwqa&password=696e9cfee8a00de0e000c5a610ee39b78224f4539b2e5e8521306597fb2be795
+    username: dkyauuutjkzwqa
+    password: 696e9cfee8a00de0e000c5a610ee39b78224f4539b2e5e8521306597fb2be795
+    driver-class-name: org.postgresql.Driver
+    
+    #jdbc:postgresql://<host>:<port>/<dbname>?user=<username>&password=<password>?user={user}&password={password}&sslmode=require
+    #jdbc:postgresql://ec2-34-224-239-147.compute-1.amazonaws.com:5432/d76q51oa7a1mom?user=dkyauuutjkzwqa&password=696e9cfee8a00de0e000c5a610ee39b78224f4539b2e5e8521306597fb2be795
+    
+    
   application:
     name: BOOKING-SERVICE
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+#    properties:
+#      hibernate:
+#        jdbc:
+#          lob:
+#            non_contextual_creation: true
+    #database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: true
+      ddl-auto: create
+      
+    
+#  h2:
+#    console:
+#      enabled: true
+#      settings:
+#        web-allow-others: true
+
+
+
 
 server:
   port: 8086

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.soa.service.booking.business.ReservaBusiness;
 import com.soa.service.booking.model.domain.Reserva;
 import com.soa.service.booking.model.dto.request.ReservaRequestDTO;
+import com.soa.service.booking.model.dto.response.ReservaCompleteDTO;
 import com.soa.service.booking.model.dto.response.ReservaResponseDTO;
 import com.soa.service.booking.model.mapper.ReservaMapper;
 import com.soa.service.booking.repository.ReservaRepository;
@@ -23,7 +24,6 @@ public class ReservaBusinessImpl implements ReservaBusiness {
 	@Override
 	public ReservaResponseDTO registrar(ReservaRequestDTO dto) {
 		Reserva reserva = ReservaMapper.mapReservaRequestToReserva(dto);
-		//repository.save(reserva);
 		return ReservaMapper.mapReservaToResponse(repository.save(reserva));
 	}
 	
@@ -39,7 +39,7 @@ public class ReservaBusinessImpl implements ReservaBusiness {
 		
 		repository.findById(id)
 			.map(reservaFounded -> reservaFounded.builder()
-					.id(id)
+					.reservaId(id)
 					.cantidadPersonas(dto.getCantidadPersonas())
 					.fechaInicio(dto.getFechaInicio())
 					.fechaFin(dto.getFechaFin())
@@ -58,6 +58,26 @@ public class ReservaBusinessImpl implements ReservaBusiness {
 	@Override
 	public List<Reserva> listar() {
 		return repository.findAll();
+	}
+	
+	@Override
+	public ReservaCompleteDTO reserva(Integer id) {
+		return repository.findById(id)
+			.map(r -> {
+				ReservaCompleteDTO dto = ReservaCompleteDTO.builder()
+						.reservaId(r.getReservaId())
+						.cantidadPersonas(r.getCantidadPersonas())
+						.fechaInicio(r.getFechaInicio())
+						.fechaFin(r.getFechaFin())
+						.titulo(r.getPaqueteTuristico().getTitulo())
+						.precio(r.getPaqueteTuristico().getPrecio())
+						.duracion(r.getPaqueteTuristico().getDuracion())
+						.fecha(r.getPaqueteTuristico().getFecha())
+						.estado(r.getEstado())
+						.build();
+				return dto;
+				
+			}).orElseThrow(() -> new IllegalArgumentException());
 	}
 }
 

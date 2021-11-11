@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.soa.service.booking.model.domain.Reserva;
 import com.soa.service.booking.model.dto.request.ReservaRequestDTO;
+import com.soa.service.booking.model.dto.response.ReservaCompleteDTO;
 import com.soa.service.booking.model.dto.response.ReservaResponseDTO;
 
 public interface ReservaBusiness {
@@ -14,4 +15,5 @@ public interface ReservaBusiness {
 	public ReservaResponseDTO buscar(Integer id);
 	public void modificar(Integer id, ReservaRequestDTO dto);
 	public void cancelar(Integer id);
+	public ReservaCompleteDTO reserva(Integer id);
 }

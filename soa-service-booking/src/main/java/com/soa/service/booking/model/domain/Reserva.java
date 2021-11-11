@@ -31,7 +31,7 @@ public class Reserva implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer reservaId;
 	private int cantidadPersonas;
 	private String fechaInicio;
 	private String fechaFin;

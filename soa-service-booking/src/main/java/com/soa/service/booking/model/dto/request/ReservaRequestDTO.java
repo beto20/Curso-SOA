@@ -1,6 +1,5 @@
 package com.soa.service.booking.model.dto.request;
 
-import java.time.LocalDateTime;
 
 import com.soa.service.booking.model.domain.PaqueteTuristico;
 
@@ -16,7 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReservaRequestDTO {
-	private Integer id;
+	private Integer reservaId;
 	private int cantidadPersonas;
 	private String fechaInicio;
 	private String fechaFin;

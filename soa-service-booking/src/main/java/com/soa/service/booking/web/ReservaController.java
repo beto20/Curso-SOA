@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.soa.service.booking.business.ReservaBusiness;
 import com.soa.service.booking.model.domain.Reserva;
 import com.soa.service.booking.model.dto.request.ReservaRequestDTO;
+import com.soa.service.booking.model.dto.response.ReservaCompleteDTO;
 import com.soa.service.booking.model.dto.response.ReservaResponseDTO;
 
 import lombok.RequiredArgsConstructor;
@@ -51,4 +52,11 @@ public class ReservaController {
 	public void cancelarReserva(@PathVariable("id") Integer id) {
 		business.cancelar(id);
 	}
+	
+	
+	@GetMapping("/response/{id}")
+	public ReservaCompleteDTO reserva(@PathVariable("id") Integer id) {
+		return business.reserva(id);
+	}
+	
 }

@@ -12,6 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PaqueteTuristicoRequestDTO {
+	private Integer paqueteId;
 	private String titulo;
 	private String descripcion;
 	private Double precio;

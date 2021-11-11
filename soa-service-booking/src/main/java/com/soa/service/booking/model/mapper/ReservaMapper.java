@@ -10,7 +10,7 @@ public class ReservaMapper {
 	
 	public static ReservaResponseDTO mapReservaToResponse(Reserva reserva) {
 		return ReservaResponseDTO.builder()
-				.id(reserva.getId())
+				.reservaId(reserva.getReservaId())
 				.cantidadPersonas(reserva.getCantidadPersonas())
 				.fechaInicio(reserva.getFechaInicio())
 				.fechaFin(reserva.getFechaFin())
@@ -21,7 +21,7 @@ public class ReservaMapper {
 	
 	public static ReservaResponseDTO mapReservaRequestToResponse(ReservaRequestDTO requestDTO) {
 		return ReservaResponseDTO.builder()
-				.id(requestDTO.getId())
+				.reservaId(requestDTO.getReservaId())
 				.cantidadPersonas(requestDTO.getCantidadPersonas())
 				.fechaInicio(requestDTO.getFechaInicio())
 				.fechaFin(requestDTO.getFechaFin())

@@ -23,7 +23,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="tabla_paquete_turistico")
+@Table(name="tabla_paquete")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PaqueteTuristico implements Serializable {
 
@@ -31,7 +31,7 @@ public class PaqueteTuristico implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer paqueteId;
 	private String titulo;
 	private String descripcion;
 	private Double precio;
