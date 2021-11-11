@@ -1,1 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-34-224-239-147.compute-1.amazonaws.com:5432/d76q51oa7a1mom?user=dkyauuutjkzwqa&password=696e9cfee8a00de0e000c5a610ee39b78224f4539b2e5e8521306597fb2be795
+    username: dkyauuutjkzwqa
+    password: 696e9cfee8a00de0e000c5a610ee39b78224f4539b2e5e8521306597fb2be795
+    driver-class-name: org.postgresql.Driver
+    
+  application:
+    name: PURCHASE-SERVICE
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
 
+server:
+  port: 8084
