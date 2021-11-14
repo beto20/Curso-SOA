@@ -1,0 +1,1 @@
+Scaffold-DbContext "DataSource=(localdb)\MSSQLLocalDB;Initial Catalog=GYG" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models force
