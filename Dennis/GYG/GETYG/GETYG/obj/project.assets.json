@@ -5802,11 +5802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\d_san\\Desktop\\GYG\\GETYG\\GETYG\\GETYG.csproj",
+      "projectUniqueName": "D:\\Curso-SOA\\Dennis\\GYG\\GETYG\\GETYG\\GETYG.csproj",
       "projectName": "GETYG",
-      "projectPath": "C:\\Users\\d_san\\Desktop\\GYG\\GETYG\\GETYG\\GETYG.csproj",
+      "projectPath": "D:\\Curso-SOA\\Dennis\\GYG\\GETYG\\GETYG\\GETYG.csproj",
       "packagesPath": "C:\\Users\\d_san\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\d_san\\Desktop\\GYG\\GETYG\\GETYG\\obj\\",
+      "outputPath": "D:\\Curso-SOA\\Dennis\\GYG\\GETYG\\GETYG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\d_san\\AppData\\Roaming\\NuGet\\NuGet.Config",

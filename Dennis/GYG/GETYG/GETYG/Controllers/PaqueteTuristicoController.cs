@@ -1,4 +1,5 @@
-﻿using GETYG.Models;
+﻿using GETYG.DTO;
+using GETYG.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,14 @@ namespace GETYG.Controllers
         /*
         
         http://localhost:35847/apiGYG/PaqueteTuristico/BuscarPaquetesTuristicos?_ubi=LI&_fechaida=10/11/2021&_fecharegreso=16/11/2021     
+        http://localhost:35847/apiGYG/PaqueteTuristico/BuscarPaquetesTuristicos?_ubi=PERU    
         
         */
         [HttpGet("BuscarPaquetesTuristicos")]
-        public IEnumerable<PaquetesTuristico> BuscarPaquetesTuristicos(string _Ubi, string _fechaIda, string _fechaRegreso)
+        public List<DtoPaqueteTuristico> ListarPaquetesTuristicos(string _Ubi, string _fechaIda, string _fechaRegreso)
         {
 
-            return PaquetesTuristico.BuscarPaquetesTuristicos(_Ubi, Convert.ToDateTime(_fechaIda), Convert.ToDateTime(_fechaRegreso));
+            return PaquetesTuristico.ListarPaquetesTuristicos(_Ubi, Convert.ToDateTime(_fechaIda), Convert.ToDateTime(_fechaRegreso));
         }
 
 

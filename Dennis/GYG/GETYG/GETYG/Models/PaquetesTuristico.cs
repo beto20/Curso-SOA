@@ -23,5 +23,7 @@ namespace GETYG.Models
         public DateTime? FechaFin { get; set; }
         public string Ubicacion { get; set; }
         public int Estado { get; set; }
+
+        
     }
 }
