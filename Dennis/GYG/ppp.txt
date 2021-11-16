@@ -1,0 +1,17 @@
+Ingresar al Package Manager Console
+Install-Package Microsoft.EntityFrameworkCore.Design
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
+;Integrated Security=true
+
+Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB;initial catalog=SOA" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Scaffold-DbContext "Data Source=Dennis\d_san;initial catalog=GYG" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB;initial catalog=GYG" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "Data Source=(DENNIS)\MSSQLLocalDB;initial catalog=GYG" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "Data Source=(DENNIS)\d_san;initial catalog=GYG" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "Data Source=DENNIS;initial catalog=GYG" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "Data Source=(DENNIS)\d_san;initial catalog=GYG;Integrated Security=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+DENNIS

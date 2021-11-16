@@ -1,0 +1,5 @@
+        [HttpGet]
+        public IEnumerable<PaquetesTuristico> Get()
+        {
+            return PaquetesTuristico.BuscarPaquetesTuristicos("PERU", Convert.ToDateTime("11/11/2021"), DateTime.MinValue);
+        }
